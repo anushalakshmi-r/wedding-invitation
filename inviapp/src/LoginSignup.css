@@ -1,0 +1,305 @@
+
+/* ================= AUTH PAGE ================= */
+
+.auth-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 8%;
+  background: #e6e6fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= AUTH CONTAINER ================= */
+
+.auth-container {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* ================= AUTH CARD ================= */
+
+.auth-card {
+  padding: 40px 35px;
+  background: #ffffff;
+
+  border: 1px solid #ffe5b4;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= HEADING ================= */
+
+.auth-card h2 {
+  margin: 0 0 30px;
+
+  font-size: clamp(23px, 2.5vw, 30px);
+  font-weight: 700;
+
+  line-height: 1.4;
+  text-align: center;
+
+  color: #333333;
+}
+
+
+/* ================= INPUT GROUP ================= */
+
+.auth-input-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.auth-input-group label {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #333333;
+}
+
+.auth-input-group input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d8d8e8;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+  color: #333333;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.auth-input-group input:focus {
+  border-color: #a99be8;
+
+  box-shadow: 0 0 0 3px rgba(169, 155, 232, 0.18);
+}
+
+.auth-input-group input::placeholder {
+  color: #999999;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.auth-submit-btn,
+.auth-continue-btn {
+  width: 100%;
+
+  padding: 13px 20px;
+
+  border-radius: 25px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Login and Sign Up */
+
+.auth-submit-btn {
+  margin-top: 5px;
+
+  border: 1px solid #ffe5b4;
+
+  background: #ffe5b4;
+
+  color: #333333;
+}
+
+.auth-submit-btn:hover {
+  background: #e6e6fa;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Continue */
+
+.auth-continue-btn {
+  margin-top: 14px;
+
+  border: 1px solid #e6e6fa;
+
+  background: #e6e6fa;
+
+  color: #333333;
+}
+
+.auth-continue-btn:hover {
+  background: #d8d0fa;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Forgot Password */
+
+.forgot-password-btn {
+  display: block;
+
+  margin: 20px auto 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+
+  color: #7665c4;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.forgot-password-btn:hover {
+  color: #333333;
+
+  text-decoration: underline;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+  .auth-page {
+    padding: 55px 5%;
+  }
+
+  .auth-container {
+    gap: 20px;
+  }
+
+  .auth-card {
+    padding: 32px 25px;
+  }
+
+  .auth-card h2 {
+    font-size: 23px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 650px) {
+
+  .auth-page {
+    padding: 40px 20px;
+  }
+
+  .auth-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .auth-card h2 {
+    font-size: 23px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .auth-page {
+    padding: 30px 15px;
+  }
+
+  .auth-card {
+    padding: 25px 18px;
+  }
+
+  .auth-card h2 {
+    font-size: 21px;
+  }
+
+  .auth-input-group input {
+    font-size: 13px;
+  }
+
+}
+/* ================= LOGIN / SIGNUP SWITCH ================= */
+
+.auth-switch-text {
+  margin: 25px 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+  text-align: center;
+
+  color: #555555;
+}
+
+.auth-switch-text a {
+  margin-left: 6px;
+
+  color: #7665c4;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.auth-switch-text a:hover {
+  color: #333333;
+
+  text-decoration: underline;
+}

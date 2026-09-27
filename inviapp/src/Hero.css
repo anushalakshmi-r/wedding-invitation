@@ -1,0 +1,2472 @@
+
+/* ================================================= */
+/* GLOBAL STYLES */
+/* ================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.hero-section,
+.invitation-designs,
+.unique-invitations,
+.theme-invitations {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================================================= */
+/* HERO SECTION */
+/* ================================================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/backgroung.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+/* White Invitation Card */
+
+.hero-card {
+
+  width: 100%;
+  max-width: 550px;
+  min-height: 380px;
+
+  padding: 50px 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* Hero Heading */
+
+.hero-card h1 {
+
+  margin: 0 0 40px;
+
+  color: #111;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+}
+
+
+/* Hero Description */
+
+.hero-card p {
+
+  margin: 0 0 30px;
+
+  color: #222;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.65;
+
+}
+
+
+/* ================================================= */
+/* GET YOUR STYLE BUTTON */
+/* ================================================= */
+
+.get-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px 24px;
+  margin: 0 auto;
+  border: 1px solid #FFE5B4;
+  border-radius: 10px;
+  background-color: #FFE5B4;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+
+.get-card-btn:hover {
+  background-color: #E6E6FA;
+  border-color: #E6E6FA;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Arrow Animation */
+
+.get-card-btn span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.get-card-btn:hover span {
+  transform: translateX(5px);
+}
+
+/* ================================================= */
+/* INVITATION DESIGNS IMAGE SECTION */
+/* ================================================= */
+
+.invitation-designs {
+  width: 100%;
+  padding: 30px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E6E6FA;
+  overflow: hidden;
+}
+
+.invitation-designs img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+
+}
+
+/* ================================================= */
+/* COMMON SECTION HEADING */
+/* ================================================= */
+
+.section-heading {
+
+  width: 100%;
+
+  max-width: 750px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+
+}
+
+
+.section-heading h2 {
+
+  margin: 0 0 12px;
+
+  color: #222;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+}
+
+
+.section-heading p {
+
+  margin: 0;
+
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+}
+
+
+/* ================================================= */
+/* UNIQUE INVITATIONS SECTION */
+/* ================================================= */
+
+.unique-invitations {
+
+  width: 100%;
+
+  padding: 70px 7%;
+
+  background-color: #E6E6FA;
+
+  text-align: center;
+
+}
+
+
+/* Existing Cards Container */
+
+.card-container {
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+}
+
+/* Existing Card */
+
+.card {
+
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+
+}
+
+
+/* Existing Card Hover */
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Existing Card Image */
+
+.card img {
+
+  width: 95%;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+}
+
+
+/* Existing Card Image Hover */
+
+.card:hover img {
+  transform: scale(1.06);
+
+}
+
+/* Card Categories */
+
+.card-categories {
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+}
+
+.card-categories h3 {
+  margin: 0;
+  color: #222;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.card-categories h3:hover {
+  color: #8B6B3F;
+  transform: translateY(-2px);
+}
+
+/* ================================================= */
+/* THEME BASED INVITATION SECTION */
+/* ================================================= */
+
+.theme-invitations {
+  width: 100%;
+  padding: 80px 7%;
+  background-color: #E6E6FA;
+  text-align: center;
+}
+
+/* Theme Card Container */
+
+.theme-card-container {
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 150px;
+}
+
+/* Theme Card Wrapper */
+
+.theme-card-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+/* Theme Card */
+
+.theme-card {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.theme-card:hover {
+
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Theme Image */
+
+.theme-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+background-color: #f8f8f8;
+
+}
+
+.theme-image img {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+}
+
+/* Image Hover */
+
+.theme-card:hover .theme-image img {
+  transform: scale(1.07);
+}
+
+/* Heading Outside Card */
+
+.theme-card-wrapper h3 {
+  margin: 18px 0 0;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.3s ease,
+              transform 0.3s ease;
+}
+
+/* Heading Hover */
+
+.theme-card-wrapper:hover h3 {
+  color: #8B6B3F;
+  transform: translateY(-2px);
+}
+
+/* ================================================= */
+/* RESPONSIVE DESIGN */
+/* ================================================= */
+
+@media (max-width: 992px) {
+  .theme-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .theme-image {
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .theme-invitations {
+    padding: 50px 20px;
+  }
+  .theme-card-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .theme-image {
+    height: 300px;
+  }
+  .theme-card-wrapper h3 {
+
+    font-size: 17px;
+
+  }
+
+}
+
+
+/* ================================================= */
+/* TABLET RESPONSIVE DESIGN */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+
+  /* Hero */
+
+  .hero-section {
+
+    min-height: 520px;
+
+    padding: 60px 5%;
+
+  }
+
+
+  .hero-card {
+
+    max-width: 500px;
+
+    padding: 40px 35px;
+
+  }
+
+
+  /* Common Heading */
+
+  .section-heading h2 {
+
+    font-size: 25px;
+
+  }
+
+
+  /* Cards */
+
+  .card-container,
+  .theme-card-container {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+  }
+
+
+  .card-categories {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+  }
+
+
+  .card-categories h3 {
+
+    font-size: 15px;
+
+  }
+
+
+  .theme-image {
+
+    height: 260px;
+
+  }
+
+}
+
+
+/* ================================================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+
+  /* Hero */
+
+  .hero-section {
+
+    min-height: 500px;
+
+    padding: 40px 20px;
+
+  }
+
+
+  .hero-card {
+
+    max-width: 100%;
+
+    min-height: auto;
+
+    padding: 35px 25px;
+
+  }
+
+
+  .hero-card h1 {
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+  }
+
+
+  .hero-card p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+  }
+
+
+  .get-card-btn {
+
+    padding: 12px 20px;
+
+    font-size: 13px;
+
+  }
+
+
+  /* Invitation Designs */
+
+  .invitation-designs {
+
+    padding: 20px 15px;
+
+  }
+
+
+  .invitation-designs img {
+
+    width: 100%;
+
+    max-width: 100%;
+
+  }
+
+
+  /* Section Heading */
+
+  .section-heading {
+
+    margin-bottom: 30px;
+
+  }
+
+
+  .section-heading h2 {
+
+    font-size: 23px;
+
+  }
+
+
+  .section-heading p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+  }
+
+
+  /* Unique Invitations */
+
+  .unique-invitations {
+
+    padding: 50px 20px;
+
+  }
+
+
+  /* Theme Invitations */
+
+  .theme-invitations {
+
+    padding: 50px 20px;
+
+  }
+
+
+  /* All Cards Single Column */
+
+  .card-container,
+  .theme-card-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+
+  /* Existing Card */
+
+  .card {
+
+    height: 350px;
+
+  }
+
+
+  /* Categories */
+
+  .card-categories {
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+  }
+
+
+  .card-categories h3 {
+
+    font-size: 15px;
+
+  }
+
+
+  /* Theme Image */
+
+  .theme-image {
+
+    height: 280px;
+
+  }
+
+
+  /* Theme Content */
+
+  .theme-card-content {
+
+    padding: 22px 18px;
+
+  }
+
+
+  .theme-card-content h3 {
+
+    font-size: 18px;
+
+  }
+
+
+  .theme-card-content p {
+
+    min-height: auto;
+
+    font-size: 13px;
+
+  }
+
+
+}
+
+
+/* ================================================= */
+/* SMALL MOBILE DEVICES */
+/* ================================================= */
+
+@media (max-width: 400px) {
+
+
+  .hero-section {
+
+    padding: 30px 15px;
+
+  }
+
+
+  .hero-card {
+
+    padding: 30px 20px;
+
+  }
+
+
+  .hero-card h1 {
+
+    font-size: 20px;
+
+  }
+
+
+  .hero-card p {
+
+    font-size: 13px;
+
+  }
+
+
+  .section-heading h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .card {
+
+    height: 300px;
+
+  }
+
+
+  .theme-image {
+
+    height: 250px;
+
+  }
+
+
+  .get-card-btn,
+  .theme-card-btn {
+
+    font-size: 12px;
+
+    padding: 10px 16px;
+
+  }
+
+}
+
+.image-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #E6E6FA;
+}
+
+.image-container {
+  width: 48%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.image-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .image-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-section {
+    padding: 10px;
+  }
+}
+
+/* ================================================= */
+/* SIMPLE AND AFFORDABLE WEDDING CARDS */
+/* ================================================= */
+
+.affordable-cards-section {
+
+  width: 100%;
+
+  padding: 80px 7%;
+
+  background-color: #E6E6FA;
+
+  font-family: "Poppins", sans-serif;
+
+}
+
+
+/* Product Card Container */
+
+.affordable-card-container {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+}
+
+
+/* Individual Product Card */
+
+.affordable-card {
+
+  width: 100%;
+
+  padding: 20px;
+
+  background-color: #fff;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+
+}
+
+
+/* Card Hover */
+
+.affordable-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* Invitation Image */
+
+.affordable-image {
+
+  width: 100%;
+
+  height: 270px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background-color: #f8f8f8;
+
+}
+
+
+/* Image */
+
+.affordable-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+
+}
+
+
+/* Image Hover */
+
+.affordable-card:hover .affordable-image img {
+
+  transform: scale(1.04);
+
+}
+
+
+/* Product Name */
+
+.affordable-card h3 {
+
+  margin: 20px 0 18px;
+
+  color: #222;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  text-align: left;
+
+}
+
+
+/* Bottom Row */
+
+.product-bottom {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+}
+
+
+/* Price */
+
+.product-price {
+
+  color: #222;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+}
+
+
+/* Action Buttons Container */
+
+.product-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+/* Transparent Buttons */
+
+.transparent-action-btn {
+
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  color: #333;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease;
+
+}
+
+
+/* Button Hover */
+
+.transparent-action-btn:hover {
+
+  background-color: #FFE5B4;
+
+  color: #222;
+
+  transform: translateY(-2px);
+
+}
+
+
+/* ================================================= */
+/* TABLET RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+  .affordable-cards-section {
+
+    padding: 65px 5%;
+
+  }
+
+  .affordable-card-container {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+  }
+
+  .affordable-image {
+
+    height: 280px;
+
+  }
+
+}
+
+
+/* ================================================= */
+/* MOBILE RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 600px) {
+
+  .affordable-cards-section {
+
+    padding: 50px 20px;
+
+  }
+
+  .affordable-card-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+  .affordable-card {
+
+    padding: 18px;
+
+  }
+
+  .affordable-image {
+
+    height: 300px;
+
+  }
+
+  .affordable-card h3 {
+
+    font-size: 15px;
+
+  }
+
+  .product-price {
+
+    font-size: 15px;
+
+  }
+
+}
+
+
+/* ================================================= */
+/* SMALL MOBILE */
+/* ================================================= */
+
+@media (max-width: 400px) {
+
+  .affordable-image {
+
+    height: 250px;
+
+  }
+
+  .affordable-card h3 {
+
+    font-size: 14px;
+
+  }
+
+  .transparent-action-btn {
+
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 14px;
+
+  }
+
+}
+/* ================= SUMMER SALE SECTION ================= */
+
+.summer-sale-section {
+  width: 100%;
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 70px 8%;
+
+  background-image: url("/summer-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Optional Light Overlay */
+
+.summer-sale-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  z-index: 0;
+}
+
+
+/* Keep Content Above Overlay */
+
+.summer-sale-heading,
+.summer-sale-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ================= LEFT HEADING ================= */
+
+.summer-sale-heading {
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summer-sale-heading h2 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 110px);
+  font-weight: 800;
+  line-height: 0.9;
+
+  color: #d4ae00;
+
+  letter-spacing: -4px;
+}
+
+.summer-sale-heading span {
+  margin-top: -8px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  font-style: italic;
+
+  color: #111111;
+
+  transform: rotate(-8deg);
+}
+
+
+/* ================= RIGHT CONTENT ================= */
+
+.summer-sale-content {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* ================= DISCOUNT LIST ================= */
+
+.discount-list {
+  width: 100%;
+}
+
+.discount-list p {
+  margin: 0 0 20px;
+
+  font-size: clamp(17px, 1.8vw, 25px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: #111111;
+}
+
+
+/* ================= STOCK CLEARANCE ================= */
+
+.stock-clearance {
+  width: 100%;
+
+  margin-top: 18px;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #efa000;
+
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+}
+
+.stock-clearance p {
+  margin: 0;
+
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: 500;
+  text-align: center;
+
+  color: #111111;
+}
+
+
+/* Hover Effect */
+
+.stock-clearance:hover {
+  background: #d88c00;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= SALE TERMS ================= */
+
+.sale-terms {
+  max-width: 470px;
+
+  margin: 25px 0 0;
+
+  font-size: clamp(14px, 1.4vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #222222;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .summer-sale-section {
+    gap: 25px;
+
+    padding: 60px 5%;
+  }
+
+  .summer-sale-heading {
+    width: 42%;
+  }
+
+  .summer-sale-content {
+    width: 55%;
+  }
+
+  .discount-list p {
+    margin-bottom: 16px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .summer-sale-section {
+    min-height: auto;
+
+    flex-direction: column;
+    gap: 35px;
+
+    padding: 55px 22px;
+
+    background-position: center;
+  }
+
+  .summer-sale-heading {
+    width: 100%;
+
+    align-items: center;
+  }
+
+  .summer-sale-heading h2 {
+    font-size: clamp(65px, 20vw, 100px);
+  }
+
+  .summer-sale-heading span {
+    font-size: clamp(36px, 11vw, 55px);
+  }
+
+  .summer-sale-content {
+    width: 100%;
+
+    align-items: center;
+  }
+
+  .discount-list {
+    width: 100%;
+  }
+
+  .discount-list p {
+    margin-bottom: 17px;
+
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .stock-clearance {
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 13px 12px;
+  }
+
+  .stock-clearance p {
+    font-size: 15px;
+  }
+
+  .sale-terms {
+    max-width: 100%;
+
+    font-size: 14px;
+    text-align: center;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .summer-sale-section {
+    padding: 45px 16px;
+  }
+
+  .discount-list p {
+    font-size: 16px;
+  }
+
+  .stock-clearance p {
+    font-size: 14px;
+  }
+
+}
+/* ================= INVITATION COLLECTIONS SECTION ================= */
+
+.invitation-collections-section {
+  width: 100%;
+
+  padding: 80px 8%;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.collections-heading {
+  max-width: 750px;
+
+  margin: 0 auto 45px;
+}
+
+.collections-heading h2 {
+  margin: 0 0 15px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+
+  color: #333333;
+}
+
+.collections-heading p {
+  margin: 0 auto;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #666666;
+}
+
+
+/* ================= CARDS CONTAINER ================= */
+
+.collections-card-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+
+/* ================= COLLECTION CARD ================= */
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e6fa;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* ================= CARD HOVER ================= */
+
+.collection-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #ffe5b4;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ================= IMAGE - 3/4 CARD ================= */
+
+.collection-image {
+  width: 100%;
+
+  height: 270px;
+
+  overflow: hidden;
+
+  background: #f8f8ff;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Image Hover Animation */
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.06);
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.collection-card-content {
+  min-height: 155px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 22px 15px 20px;
+}
+
+.collection-card-content h3 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: #333333;
+}
+
+
+/* ================= BUY NOW BUTTON ================= */
+
+.collection-buy-btn {
+  padding: 10px 26px;
+
+  border: 1px solid #e6e6fa;
+  border-radius: 25px;
+
+  background: #fca505;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.collection-buy-btn:hover {
+  background: #e6e6fa;
+
+  color: #333333;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.collection-buy-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+  .collections-card-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+  .collection-image {
+    height: 300px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .invitation-collections-section {
+    padding: 55px 20px;
+  }
+
+  .collections-heading {
+    margin-bottom: 30px;
+  }
+
+  .collections-heading p {
+    font-size: 14px;
+  }
+
+  .collections-card-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .collection-image {
+    height: 320px;
+  }
+
+  .collection-card-content {
+    min-height: 145px;
+
+    padding: 20px 15px;
+  }
+
+  .collection-card-content h3 {
+    font-size: 17px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .invitation-collections-section {
+    padding: 45px 16px;
+  }
+
+  .collection-image {
+    height: 280px;
+  }
+
+  .collection-card-content h3 {
+    font-size: 15px;
+  }
+
+  .collection-buy-btn {
+    padding: 9px 23px;
+
+    font-size: 13px;
+  }
+
+}
+
+/* ================= CLIENT TESTIMONIALS SECTION ================= */
+
+.client-testimonials-section {
+  width: 100%;
+
+  padding: 80px 8%;
+
+  background: #e6e6fa;
+
+  text-align: center;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.testimonials-heading {
+  max-width: 750px;
+
+  margin: 0 auto 45px;
+}
+
+.testimonials-heading h2 {
+  margin: 0 0 15px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+
+  color: #333333;
+}
+
+.testimonials-heading p {
+  margin: 0 auto;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #666666;
+}
+
+
+/* ================= TESTIMONIAL CARDS ================= */
+
+.testimonials-card-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  width: 100%;
+}
+
+
+/* ================= SINGLE CARD ================= */
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 480px;
+
+  padding: 35px 25px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #ffe5b4;
+  border-radius: 18px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* ================= CARD HOVER ================= */
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #d8c4f5;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.13);
+}
+
+
+/* ================= ROUND CLIENT IMAGE ================= */
+
+.client-image {
+  width: 105px;
+  height: 105px;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  border: 4px solid #ffe5b4;
+  border-radius: 50%;
+
+  background: #f8f8ff;
+
+  flex-shrink: 0;
+}
+
+.client-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* Image Hover */
+
+.testimonial-card:hover .client-image img {
+  transform: scale(1.08);
+}
+
+
+/* ================= CLIENT NAME ================= */
+
+.testimonial-card h3 {
+  margin: 0 0 12px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #333333;
+}
+
+
+/* ================= SHORT REVIEW HEADING ================= */
+
+.testimonial-card h4 {
+  margin: 0 0 16px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: #8c6f00;
+}
+
+
+/* ================= DETAILED REVIEW ================= */
+
+.client-review {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+
+  color: #666666;
+}
+
+
+/* ================= STAR RATING ================= */
+
+.client-stars {
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.client-stars span {
+  font-size: 24px;
+  letter-spacing: 3px;
+
+  color: #f5b301;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+  .testimonials-card-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+  .testimonial-card {
+    min-height: 450px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .client-testimonials-section {
+    padding: 55px 20px;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 30px;
+  }
+
+  .testimonials-heading p {
+    font-size: 14px;
+  }
+
+  .testimonials-card-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .testimonial-card {
+    min-height: auto;
+
+    padding: 30px 22px 25px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 19px;
+  }
+
+  .client-review {
+    font-size: 14px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .client-testimonials-section {
+    padding: 45px 16px;
+  }
+
+  .testimonial-card {
+    padding: 28px 18px 24px;
+  }
+
+  .client-image {
+    width: 95px;
+    height: 95px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 18px;
+  }
+
+  .client-stars span {
+    font-size: 21px;
+  }
+
+}
+
+/* ================= HOW IT WORKS SECTION ================= */
+
+.how-it-works-section {
+  width: 100%;
+
+  padding: 65px 8% 75px;
+
+  background: #e6e6fa;
+
+  text-align: center;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.how-it-works-heading {
+  margin-bottom: 65px;
+}
+
+.how-it-works-heading h2 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+
+  color: #111111;
+}
+
+
+/* ================= STEPS CONTAINER ================= */
+
+.how-it-works-container {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  align-items: start;
+
+  gap: 25px;
+}
+
+
+/* ================= SINGLE STEP ================= */
+
+.work-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+}
+
+
+/* ================= ICON ================= */
+
+.work-icon {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 18px;
+
+  background: #ffe5b4;
+
+  color: #5964c7;
+
+  font-size: 43px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ================= ICON HOVER ================= */
+
+.work-step:hover .work-icon {
+  transform: translateY(-7px) scale(1.05);
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= STEP TEXT ================= */
+
+.work-step p {
+  max-width: 180px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  color: #111111;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .how-it-works-section {
+    padding: 55px 5% 65px;
+  }
+
+  .how-it-works-heading {
+    margin-bottom: 45px;
+  }
+
+  .how-it-works-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 40px;
+  }
+
+  .work-icon {
+    width: 70px;
+    height: 70px;
+
+    font-size: 38px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .how-it-works-section {
+    padding: 50px 20px 55px;
+  }
+
+  .how-it-works-heading {
+    margin-bottom: 35px;
+  }
+
+  .how-it-works-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 20px;
+  }
+
+  .work-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 34px;
+
+    border-radius: 15px;
+  }
+
+  .work-step p {
+    max-width: 150px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .how-it-works-container {
+    gap: 30px 12px;
+  }
+
+  .work-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 30px;
+  }
+
+  .work-step p {
+    font-size: 12px;
+  }
+
+}
+
+/* ================= FOOTER SECTION ================= */
+
+.website-footer {
+  width: 100%;
+
+  background: #ffe5b4;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #111111;
+}
+
+
+/* ================= FOOTER MAIN ================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 1.15fr 1fr 1fr 1.3fr;
+
+  gap: 40px;
+
+  padding: 45px 8% 25px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= BRAND SECTION ================= */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 285px;
+  height: 225px;
+
+  object-fit: contain;
+
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  max-width: 180px;
+
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* ================= SOCIAL MEDIA ================= */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.footer-social span {
+  width: 100%;
+
+  margin-bottom: 2px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  color: #333333;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+
+  color: #7770d8;
+}
+
+
+/* ================= FOOTER COLUMNS ================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 0 0 18px;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  color: #111111;
+}
+
+.footer-column a {
+  margin-bottom: 13px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  color: #111111;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #7770d8;
+
+  transform: translateX(4px);
+}
+
+
+/* ================= CONTACT DETAILS ================= */
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin: 0 0 16px;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-contact p svg {
+  flex-shrink: 0;
+
+  margin-top: 4px;
+
+  font-size: 16px;
+}
+
+.footer-contact p span {
+  max-width: 230px;
+}
+
+.footer-contact .footer-working-days {
+  margin-top: -5px;
+
+  font-weight: 500;
+}
+
+
+/* ================= FOOTER BOTTOM ================= */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 10px 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  text-align: center;
+
+  color: #111111;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 30px;
+
+    padding: 45px 6% 30px;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    width: 135px;
+    height: 115px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 40px 25px 30px;
+  }
+
+  .footer-brand {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 140px;
+    height: 120px;
+  }
+
+  .footer-tagline {
+    max-width: 230px;
+  }
+
+  .footer-social {
+    justify-content: center;
+
+    margin-top: 25px;
+  }
+
+  .footer-column {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+
+    max-width: 100%;
+  }
+
+  .footer-contact p span {
+    max-width: 260px;
+
+    text-align: left;
+  }
+
+  .footer-contact .footer-working-days {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    padding: 12px 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .footer-main {
+    padding: 35px 18px 25px;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+  }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 9px;
+  }
+
+}

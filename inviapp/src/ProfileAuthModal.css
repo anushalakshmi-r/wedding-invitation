@@ -1,0 +1,177 @@
+
+.auth-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 30, 45, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.auth-modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 38px 45px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+
+.auth-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  color: #5a4052;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.auth-modal-close:hover {
+  color: #c08497;
+}
+
+/* Tabs */
+
+.auth-modal-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 35px;
+}
+
+.auth-modal-tabs button {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: #222222;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.auth-modal-tabs button.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #222222;
+}
+
+/* Form Content */
+
+.auth-modal-content h2 {
+  color: #222222;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.auth-modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal-content label {
+  color: #222222;
+  font-size: 13px;
+  margin: 10px 0 5px;
+}
+
+.auth-modal-content input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.auth-modal-content input:focus {
+  border-color: #c08497;
+}
+
+/* Submit Button */
+
+.auth-submit-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 5px;
+  background: #c83232;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+  background: #a92525;
+}
+
+/* Forgot Password */
+
+.forgot-password-btn {
+  display: block;
+  margin: 12px auto 0;
+  border: none;
+  background: transparent;
+  color: #c83232;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Bottom Text */
+
+.auth-bottom-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #765c6b;
+  font-size: 12px;
+}
+
+.auth-bottom-text span {
+  color: #c83232;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .auth-modal-container {
+    padding: 35px 25px;
+  }
+
+  .auth-modal-tabs {
+    gap: 40px;
+  }
+
+  .auth-modal-tabs button {
+    font-size: 19px;
+  }
+
+  .auth-modal-content h2 {
+    font-size: 16px;
+  }
+}

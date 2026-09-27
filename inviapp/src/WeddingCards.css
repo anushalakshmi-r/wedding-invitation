@@ -1,0 +1,540 @@
+
+/* ================= WEDDING CARDS PAGE ================= */
+
+.wedding-cards-page {
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 80px 8%;
+
+  background: #e6e6fa;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ================= HEADING ================= */
+
+.wedding-cards-heading {
+  text-align: center;
+
+  max-width: 750px;
+
+  margin: 0 auto 50px;
+}
+
+.wedding-cards-heading h1 {
+  margin: 0 0 15px;
+
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 700;
+
+  color: #333333;
+}
+
+.wedding-cards-heading p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #666666;
+}
+
+
+/* ================= CARDS CONTAINER ================= */
+
+.wedding-cards-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 80px;
+
+  width: 100%;
+}
+
+
+/* ================= SINGLE CARD ================= */
+
+.wedding-card-item {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #ffe5b4;
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* ================= CARD HOVER ================= */
+
+.wedding-card-item:hover {
+  transform: translateY(-8px);
+
+  border-color: #bdb0f5;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+
+/* ================= CARD IMAGE ================= */
+
+.wedding-card-image {
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #f8f8ff;
+}
+
+.wedding-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Image Hover */
+
+.wedding-card-item:hover .wedding-card-image img {
+  transform: scale(1.06);
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.wedding-card-content {
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 15px;
+}
+
+.wedding-card-content h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-align: center;
+
+  color: #333333;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+  .wedding-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+  .wedding-card-image {
+    height: 320px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .wedding-cards-page {
+    padding: 55px 20px;
+  }
+
+  .wedding-cards-heading {
+    margin-bottom: 35px;
+  }
+
+  .wedding-cards-heading p {
+    font-size: 14px;
+  }
+
+  .wedding-cards-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .wedding-card-image {
+    height: 350px;
+  }
+
+  .wedding-card-content {
+    min-height: 90px;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .wedding-cards-page {
+    padding: 45px 16px;
+  }
+
+  .wedding-card-image {
+    height: 300px;
+  }
+
+  .wedding-card-content h3 {
+    font-size: 15px;
+  }
+
+}
+
+/* ================= FOOTER SECTION ================= */
+
+.website-footer {
+  width: 100%;
+
+  background: #ffe5b4;
+
+  font-family: "Poppins", sans-serif;
+
+  color: #111111;
+}
+
+
+/* ================= FOOTER MAIN ================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 1.15fr 1fr 1fr 1.3fr;
+
+  gap: 40px;
+
+  padding: 45px 8% 25px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= BRAND SECTION ================= */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 145px;
+  height: 125px;
+
+  object-fit: contain;
+
+  margin-bottom: 10px;
+}
+
+.footer-tagline {
+  max-width: 180px;
+
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+
+/* ================= SOCIAL MEDIA ================= */
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.footer-social span {
+  width: 100%;
+
+  margin-bottom: 2px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  color: #333333;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+
+  color: #7770d8;
+}
+
+
+/* ================= FOOTER COLUMNS ================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 0 0 18px;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  color: #111111;
+}
+
+.footer-column a {
+  margin-bottom: 13px;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  color: #111111;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #7770d8;
+
+  transform: translateX(4px);
+}
+
+
+/* ================= CONTACT DETAILS ================= */
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin: 0 0 16px;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-contact p svg {
+  flex-shrink: 0;
+
+  margin-top: 4px;
+
+  font-size: 16px;
+}
+
+.footer-contact p span {
+  max-width: 230px;
+}
+
+.footer-contact .footer-working-days {
+  margin-top: -5px;
+
+  font-weight: 500;
+}
+
+
+/* ================= FOOTER BOTTOM ================= */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 10px 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  text-align: center;
+
+  color: #111111;
+}
+
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 30px;
+
+    padding: 45px 6% 30px;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    width: 135px;
+    height: 115px;
+  }
+
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 40px 25px 30px;
+  }
+
+  .footer-brand {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 140px;
+    height: 120px;
+  }
+
+  .footer-tagline {
+    max-width: 230px;
+  }
+
+  .footer-social {
+    justify-content: center;
+
+    margin-top: 25px;
+  }
+
+  .footer-column {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+
+    max-width: 100%;
+  }
+
+  .footer-contact p span {
+    max-width: 260px;
+
+    text-align: left;
+  }
+
+  .footer-contact .footer-working-days {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    padding: 12px 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+
+  .footer-main {
+    padding: 35px 18px 25px;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+  }
+
+  .footer-column a {
+    font-size: 13px;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 9px;
+  }
+
+}

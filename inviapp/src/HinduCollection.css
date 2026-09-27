@@ -1,0 +1,194 @@
+
+.hindu-collection-section {
+  padding: 140px 6% 80px;
+  background: #fffaf5;
+  min-height: 100vh;
+}
+
+.hindu-collection-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.hindu-collection-heading h1 {
+  font-size: 38px;
+  color: #5a4052;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hindu-collection-heading p {
+  color: #765c6b;
+  font-size: 16px;
+}
+
+/* 4 Cards in a Row */
+
+.hindu-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Individual Card */
+
+.hindu-invitation-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(90, 64, 82, 0.12);
+  transition: all 0.3s ease;
+}
+
+.hindu-invitation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(90, 64, 82, 0.2);
+}
+
+/* Image */
+
+.hindu-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #f8f0e8;
+}
+
+.hindu-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hindu-invitation-card:hover
+.hindu-card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Wishlist Heart */
+
+.hindu-wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #c08497;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.hindu-wishlist-btn:hover {
+  background: #c08497;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+/* Selected Wishlist Heart */
+
+.hindu-wishlist-btn.wishlist-selected {
+  background-color: #c08497;
+  color: #ffffff;
+}
+
+.hindu-wishlist-btn.wishlist-selected:hover {
+  background-color: #5a4052;
+  color: #ffffff;
+}
+
+/* Card Details */
+
+.hindu-card-details {
+  padding: 18px 18px 20px;
+}
+
+.hindu-card-details h3 {
+  color: #5a4052;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.hindu-card-details p {
+  color: #c08497;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .hindu-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablet */
+
+@media (max-width: 800px) {
+  .hindu-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hindu-collection-heading h1 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .hindu-collection-section {
+    padding: 120px 5% 50px;
+  }
+
+  .hindu-card-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .hindu-card-image-wrapper {
+    height: 360px;
+  }
+
+  .hindu-collection-heading h1 {
+    font-size: 25px;
+  }
+}
+.hindu-add-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #c08497;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hindu-add-cart-btn:hover {
+  background: #5a4052;
+  transform: translateY(-2px);
+}
