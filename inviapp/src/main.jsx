@@ -14,6 +14,8 @@ import HinduCollection from "./HinduCollection";
 import { WishlistProvider } from "./WishlistContext";
 import { CartProvider } from "./CartContext";
 import Checkout from "./Checkout";
+import Payment from "./Payment";
+import OrderSuccess from "./OrderSuccess";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -49,7 +51,14 @@ createRoot(document.getElementById('root')).render(
   element={<HinduCollection />}
 />
 <Route path="/checkout" element={<Checkout />} />
-
+<Route
+  path="/payment"
+  element={<Payment />}
+/>
+<Route
+  path="/order-success"
+  element={<OrderSuccess />}
+/>
 </Routes>
 </CartProvider>
 </WishlistProvider>

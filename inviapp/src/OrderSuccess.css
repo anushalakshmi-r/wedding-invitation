@@ -1,0 +1,123 @@
+/* Order Success Section */
+
+.order-success {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #E6E6FA;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Success Card */
+
+.success-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Success Icon */
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #FFE5B4;
+  color: #222;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* Heading */
+
+.success-card h1 {
+  margin-bottom: 15px;
+  color: #111;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+/* Description */
+
+.success-card p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Order Number */
+
+.order-number {
+  margin: 25px 0;
+  padding: 12px;
+  background-color: #E6E6FA;
+  border-radius: 7px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Continue Shopping Button */
+
+.continue-shopping {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 7px;
+  background-color: #FFE5B4;
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.continue-shopping:hover {
+  background-color: #E6E6FA;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .order-success {
+    padding: 100px 15px 40px;
+  }
+
+  .success-card {
+    padding: 35px 20px;
+  }
+
+  .success-card h1 {
+    font-size: 22px;
+  }
+
+  .success-card p {
+    font-size: 14px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .continue-shopping {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

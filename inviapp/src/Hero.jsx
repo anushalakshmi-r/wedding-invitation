@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "./Hero.css";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import {
@@ -11,8 +11,60 @@ import {
 } from "react-icons/fa";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import WishlistModal from "./WishlistModal";
+import CartModal from "./CartModal";
+import { useWishlist } from "./WishlistContext";
+import { useCart } from "./CartContext";
+
+const heroProducts = [
+  {
+    image: "/redcard.png",
+    name: "Red Invite Card With Bride and Groom Names",
+    price: 10.25,
+  },
+  {
+    image: "/yellowcard.png",
+    name: "Simple Red and Yellow Card Invite with Bride And Groom Names",
+    price: 5.0,
+  },
+  {
+    image: "/redvertical.png",
+    name: "Red Vertical Personal Invite With Bride And Groom Names",
+    price: 7.0,
+  },
+  {
+    image: "/god.png",
+    name: "White Personal Invite with Bride And Groom Names",
+    price: 7.5,
+  },
+  {
+    image: "/ganapathy.png",
+    name: "Brown With Vinayagar Picture Invite with Bride and Groom Names",
+    price: 7.0,
+  },
+  {
+    image: "/marroncard.png",
+    name: "Merron Card With Rangoli Theme Personal Invite Bride And Groom Names",
+    price: 9.0,
+  },
+];
 
 function Hero() {
+  const { addToWishlist } = useWishlist();
+  const { addToCart } = useCart();
+  const [showWishlist, setShowWishlist] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  const handleAddToWishlist = (product) => {
+    addToWishlist(product);
+    setShowWishlist(true);
+  };
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setShowCart(true);
+  };
+
   return (
     <>
       {/* ================= HERO SECTION ================= */}
@@ -235,266 +287,47 @@ function Hero() {
   </div>
 
 
-  <div className="affordable-card-container">
-
-
-    {/* Card 1 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/redcard.png"
-          alt="Classic Floral Wedding Card"
-        />
-
-      </div>
-
-      <h3>Red Invite Card With <br/>
-        Bride and Groom Names</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.10.25</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Classic Floral card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Classic Floral card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
+<div className="affordable-card-container">
+    {heroProducts.map((product) => (
+      <div className="affordable-card" key={product.image}>
+        <div className="affordable-image">
+          <img src={product.image} alt={product.name} />
         </div>
 
-      </div>
+        <h3>{product.name}</h3>
 
-    </div>
+        <div className="product-bottom">
+          <span className="product-price">Rs.{Number(product.price).toFixed(2)}</span>
 
+          <div className="product-actions">
+            <button
+              className="transparent-action-btn"
+              aria-label={`Add ${product.name} to wishlist`}
+              onClick={() => handleAddToWishlist(product)}
+            >
+              <FaHeart />
+            </button>
 
-    {/* Card 2 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/yellowcard.png"
-          alt="Royal Gold Wedding Card"
-        />
-
-      </div>
-
-      <h3>Simple Red and Yellow Card<br/>Invite with Bride And Groom<br/>Nmaes</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.5.00</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Royal Gold card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Royal Gold card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
+            <button
+              className="transparent-action-btn"
+              aria-label={`Add ${product.name} to cart`}
+              onClick={() => handleAddToCart(product)}
+            >
+              <FaShoppingCart />
+            </button>
+          </div>
         </div>
-
       </div>
-
-    </div>
-
-
-    {/* Card 3 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/redvertical.png"
-          alt="Pastel Love Wedding Card"
-        />
-
-      </div>
-
-      <h3>Red Vertical Personal Invite With<br/>Bride ANd Groom Names</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.7.00</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Pastel Love card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Pastel Love card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    {/* Card 4 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/god.png"
-          alt="Minimal Elegant Wedding Card"
-        />
-
-      </div>
-
-      <h3>White Personal Invite with<br/>Bride And Groom Names</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.7.50</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Minimal Elegant card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Minimal Elegant card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    {/* Card 5 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/ganapathy.png"
-          alt="Traditional Wedding Card"
-        />
-
-      </div>
-
-      <h3>Brown With Vinayagar Picture<br/>Invite with Bride and Groom <br/>Names</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.7.00</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Traditional card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Traditional card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    {/* Card 6 */}
-
-    <div className="affordable-card">
-
-      <div className="affordable-image">
-
-        <img
-          src="/marroncard.png"
-          alt="Modern Wedding Card"
-        />
-
-      </div>
-
-      <h3>Merron Card With Rangoli Theme <br/> Personal Invite Bride And<br/> Groom Names</h3>
-
-      <div className="product-bottom">
-
-        <span className="product-price">Rs.9.00</span>
-
-        <div className="product-actions">
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Modern card to wishlist"
-          >
-            <FaHeart />
-          </button>
-
-          <button
-            className="transparent-action-btn"
-            aria-label="Add Modern card to cart"
-          >
-            <FaShoppingCart />
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
+    ))}
   </div>
 
 </section>
 
-{/* ================= SUMMER SALE SECTION ================= */}
+      {showWishlist && (
+        <WishlistModal onClose={() => setShowWishlist(false)} />
+      )}
+
+      {showCart && <CartModal onClose={() => setShowCart(false)} />}
 
 <section className="summer-sale-section">
 

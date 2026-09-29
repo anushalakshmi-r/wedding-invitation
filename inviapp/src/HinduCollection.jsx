@@ -1,7 +1,6 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "./HinduCollection.css";
@@ -9,20 +8,21 @@ import "./Hero.css";
 import { useWishlist } from "./WishlistContext";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "./CartContext";
+import CartModal from "./CartModal";
 
 const hinduCards = [
-  { image: "/hindu1.png", name: "The Blue Wedding Card", price: "Rs. 72.35" },
-  { image: "/hindu2.png", name: "Ganesha Wedding Card", price: "Rs. 25.25" },
-  { image: "/hindu3.png", name: "Wedding Card Favor Box", price: "Rs. 39.65" },
-  { image: "/hindu4.png", name: "Theme Wedding Card", price: "Rs. 30.00" },
-  { image: "/hindu5.png", name: "Vintage Wedding Card", price: "Rs. 30.15" },
-  { image: "/hindu6.png", name: "Elegant Peacock Wedding Card", price: "Rs. 15.00" },
-  { image: "/hindu7.png", name: "Unique Wedding Card", price: "Rs. 22.50" },
-  { image: "/hindu8.png", name: "Wardrope Wedding Card", price: "Rs. 59.75" },
-  { image: "/hindu9.png", name: "Editable Wedding Card", price: "Rs. 35.50" },
-  { image: "/hindu10.png", name: "Traditional Wedding Card", price: "Rs. 25.00" },
-  { image: "/hindu11.png", name: "Royal Scroll Wedding Card", price: "Rs. 75.00" },
-  { image: "/hindu12.png", name: "Gate Fold Wedding Card", price: "Rs. 43.20" },
+  { image: "/hindu1.png", name: "The Blue Wedding Card", price: 72.35 },
+  { image: "/hindu2.png", name: "Ganesha Wedding Card", price: 25.25 },
+  { image: "/hindu3.png", name: "Wedding Card Favor Box", price: 39.65 },
+  { image: "/hindu4.png", name: "Theme Wedding Card", price: 30.0 },
+  { image: "/hindu5.png", name: "Vintage Wedding Card", price: 30.15 },
+  { image: "/hindu6.png", name: "Elegant Peacock Wedding Card", price: 15.0 },
+  { image: "/hindu7.png", name: "Unique Wedding Card", price: 22.5 },
+  { image: "/hindu8.png", name: "Wardrope Wedding Card", price: 59.75 },
+  { image: "/hindu9.png", name: "Editable Wedding Card", price: 35.5 },
+  { image: "/hindu10.png", name: "Traditional Wedding Card", price: 25.0 },
+  { image: "/hindu11.png", name: "Royal Scroll Wedding Card", price: 75.0 },
+  { image: "/hindu12.png", name: "Gate Fold Wedding Card", price: 43.2 },
 ];
 
 function HinduCollection() {
@@ -32,6 +32,13 @@ function HinduCollection() {
   removeFromWishlist,
 } = useWishlist();
   const { addToCart } = useCart();
+  const [showCart, setShowCart] = useState(false);
+
+  const handleAddToCart = (card) => {
+    addToCart(card);
+    setShowCart(true);
+  };
+
   return (
     <>
       <Navbar />
@@ -75,13 +82,13 @@ function HinduCollection() {
 
               <div className="hindu-card-details">
                 <h3>{card.name}</h3>
-                <p>{card.price}</p>
+                <p>₹{Number(card.price).toFixed(2)}</p>
               </div>
 
               
 <button
   className="hindu-add-cart-btn"
-  onClick={() => addToCart(card)}
+  onClick={() => handleAddToCart(card)}
 >
   <FaShoppingCart /> Add to Cart
 </button>
@@ -92,6 +99,8 @@ function HinduCollection() {
         </div>
          
       </section>
+
+      {showCart && <CartModal onClose={() => setShowCart(false)} />}
          
       <Footer />
     </>

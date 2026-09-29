@@ -1,0 +1,107 @@
+.payment-section {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background-color: #E6E6FA;
+  font-family: "Poppins", sans-serif;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.payment-container h1 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.payment-subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-methods label {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payment-methods input {
+  margin-right: 10px;
+}
+
+.payment-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fffaf0;
+  border-radius: 8px;
+}
+
+.payment-box input,
+.payment-box select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 18px;
+}
+
+.pay-now-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+  background-color: #FFE5B4;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.pay-now-btn:hover {
+  background-color: #E6E6FA;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+  .payment-container {
+    padding: 25px 18px;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .payment-container h1 {
+    font-size: 24px;
+  }
+}

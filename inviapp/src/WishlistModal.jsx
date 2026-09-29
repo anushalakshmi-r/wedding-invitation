@@ -41,7 +41,7 @@ function WishlistModal({ onClose }) {
 
                 <div className="wishlist-item-details">
                   <h3>{item.name}</h3>
-                  <p>{item.price}</p>
+                  <p>₹{Number(String(item.price).replace(/[^\d.]/g, "") || 0).toFixed(2)}</p>
 
                   <button
                     className="wishlist-remove-btn"

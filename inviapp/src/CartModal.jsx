@@ -21,7 +21,7 @@ function CartModal({ onClose }) {
   const navigate = useNavigate();
 
   const totalAmount = cartItems.reduce((total, item) => {
-    const price = Number(item.price.replace(/[Rs,]/g, ""));
+    const price = Number(String(item.price).replace(/[^\d.]/g, "")) || 0;
     return total + price * item.quantity;
   }, 0);
 
@@ -60,7 +60,9 @@ function CartModal({ onClose }) {
 
                   <div className="cart-item-details">
                     <h3>{item.name}</h3>
-                    <p className="cart-item-price">{item.price}</p>
+                    <p className="cart-item-price">
+                      ₹{Number(String(item.price).replace(/[^\d.]/g, "") || 0).toFixed(2)}
+                    </p>
 
                     {/* Quantity Controls */}
                     <div className="quantity-controls">

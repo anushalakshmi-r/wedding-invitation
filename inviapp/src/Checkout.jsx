@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "./CartContext";
 import "./Checkout.css";
 
 function Checkout() {
+  const navigate = useNavigate();
   const { cartItems } = useCart();
 
   const totalAmount = cartItems.reduce((total, item) => {
-    const price = Number(String(item.price).replace(/[₹,]/g, ""));
+    const price = Number(String(item.price).replace(/[^\d.]/g, "")) || 0;
     return total + price * item.quantity;
   }, 0);
 
@@ -124,7 +125,7 @@ function Checkout() {
                     </p>
 
                     <strong>
-                      {item.price}
+                      ₹{Number(String(item.price).replace(/[^\d.]/g, "") || 0).toFixed(2)}
                     </strong>
 
                   </div>
@@ -152,7 +153,10 @@ function Checkout() {
               </strong>
             </div>
 
-            <button className="place-order-btn">
+            <button
+              className="continue-payment-btn"
+              onClick={() => navigate("/payment")}
+            >
               Continue to Payment
             </button>
 
